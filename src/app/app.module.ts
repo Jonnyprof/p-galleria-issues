@@ -1,10 +1,10 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule }    from '@angular/forms';
-import { HttpClientModule }    from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent }   from './app.component';
+import { AppComponent } from './app.component';
 
 // Import PrimeNG modules
 import { AccordionModule } from 'primeng/accordion';
@@ -120,6 +120,7 @@ import { TreeTableModule } from 'primeng/treetable';
     FileUploadModule,
     GalleriaModule,
     GMapModule,
+    HttpClientModule,
     InplaceModule,
     InputMaskModule,
     InputSwitchModule,
@@ -167,9 +168,10 @@ import { TreeTableModule } from 'primeng/treetable';
     ToolbarModule,
     TooltipModule,
     TreeModule,
-    TreeTableModule ],
-  declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+    TreeTableModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+}
