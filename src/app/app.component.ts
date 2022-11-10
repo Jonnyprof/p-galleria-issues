@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { PhotoService } from './services/photoservice';
 
 @Component({
@@ -26,8 +26,10 @@ export class AppComponent implements OnInit {
   showThumbnails = true;
   autoPlay = false;
 
-  constructor(private photoService: PhotoService) {
+  constructor(private photoService: PhotoService,
+              private changeDetector: ChangeDetectorRef) {
   }
+
 
   ngOnInit() {
     this.photoService.getImages().then((images) => {
@@ -37,9 +39,13 @@ export class AppComponent implements OnInit {
 
   toggleShowThumbnails() {
     this.showThumbnails = !this.showThumbnails;
+    // ChangeDetector is not really necessary
+    this.changeDetector.detectChanges();
   }
 
   toggleAutoPlay() {
     this.autoPlay = !this.autoPlay;
+    // ChangeDetector is not really necessary
+    this.changeDetector.detectChanges();
   }
 }
