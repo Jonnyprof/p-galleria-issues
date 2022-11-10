@@ -3,13 +3,19 @@
 
 <button pButton label="Show thumbnail" (click)="toggleShowThumbnails()"></button>
 <div>
-  <label>Current value:</label>
+  <label>Show thumbnail:</label>
   <span>{{ showThumbnails }}</span>
+</div>
+<button pButton label="AutoPlay" (click)="toggleAutoPlay()"></button>
+<div>
+  <label>AutoPlay:</label>
+  <span>{{ autoPlay }}</span>
 </div>
 <div class="content-section implementation">
   <div class="card">
     <h5>Positioned at Bottom</h5>
     <p-galleria
+      [autoPlay]="autoPlay"
       [value]="images"
       [responsiveOptions]="responsiveOptions"
       [containerStyle]="{'max-width': '660px'}"

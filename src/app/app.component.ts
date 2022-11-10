@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
   ];
 
   showThumbnails = true;
+  autoPlay = false;
 
   constructor(private photoService: PhotoService) {
   }
@@ -36,5 +37,9 @@ export class AppComponent implements OnInit {
 
   toggleShowThumbnails() {
     this.showThumbnails = !this.showThumbnails;
+  }
+
+  toggleAutoPlay() {
+    this.autoPlay = !this.autoPlay;
   }
 }
